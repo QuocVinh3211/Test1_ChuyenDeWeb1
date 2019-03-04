@@ -27,6 +27,17 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+    // dang nhap class
+    public function getUser($email) {
+        $sql = $this->where('email' -> $email)->get();
+        return $sql[0]);
+    }
+    
+    // luu cai sessection
+    $this->secssection()->put('email', $row['email']);
+    return redirect('index');
+ 
 
     /**
      * The attributes that should be cast to native types.
